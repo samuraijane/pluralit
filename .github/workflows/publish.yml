@@ -28,4 +28,4 @@ jobs:
         with:
           publish: pnpm run build  # then runs the build
         env:
-          GITHUB_TOKEN: ${{ tokens.gh_workflows }}  # he did not cover this in the video
+          GITHUB_TOKEN: ${{ secrets.ADAM }}  # he did not cover this in the video
