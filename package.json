@@ -1,0 +1,47 @@
+{
+  "name": "@samuraijane/pluralit",
+  "version": "0.0.1",
+  "description": "Convert singular English nouns to plural ones.",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "rm -fr ./dist/* && tsup index.ts --format cjs,esm --dts",
+    "lint": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuraijane/pluralit.git"
+  },
+  "keywords": [
+    "english",
+    "noun",
+    "plural",
+    "pluralization",
+    "pluralize",
+    "plurals",
+    "singular",
+    "singularization",
+    "singularize",
+    "singulars"
+  ],
+  "author": "Matthew Day",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samuraijane/pluralit.git/issues"
+  },
+  "homepage": "https://github.com/samuraijane/pluralit.git#readme",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.0",
+    "tsup": "^6.6.3",
+    "typescript": "^4.9.5"
+  }
+}
