@@ -10,7 +10,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v3  # checks out the repository
       - uses: pnpm/action-setup@v2  # sets up pnpm
@@ -20,7 +21,7 @@ jobs:
         with:
           node-version: 16.x
           cache: "pnpm"
-
+          scope: "@samuraijane"
       - run: pnpm install --frozen-lockfile  # install with a frozen lockfile
       - name: Create Release Pull Request or Publish  # this is our last step
         id: changesets
