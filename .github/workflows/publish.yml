@@ -9,7 +9,8 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}  # ensures that the two pu
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions: write
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3  # checks out the repository
       - uses: pnpm/action-setup@v2  # sets up pnpm
