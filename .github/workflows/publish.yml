@@ -18,8 +18,9 @@ jobs:
           version: 7
       - uses: actions/setup-node@v3  # sets up node
         with:
-          node-version: 16.x
-          cache: "pnpm"
+          node-version: '16.x'
+          cache: 'pnpm'
+          registry-url: 'https://registry.npmjs.org'
       - run: pnpm install --frozen-lockfile  # install with a frozen lockfile
       - name: Create Release Pull Request or Publish  # this is our last step
         id: changesets
@@ -28,3 +29,4 @@ jobs:
           publish: pnpm run release  # then runs the build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{secrets.ADAM}}
