@@ -20,7 +20,6 @@ jobs:
         with:
           node-version: '16.x'
           cache: 'pnpm'
-          registry-url: 'https://registry.npmjs.org'
       - run: pnpm install --frozen-lockfile  # install with a frozen lockfile
       - name: Create Release Pull Request or Publish  # this is our last step
         id: changesets
