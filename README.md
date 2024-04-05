@@ -29,7 +29,7 @@ npm link @samuraijane/pluralit
 // index.mjs
 import { pluralit } from "@samuraijane/pluralit";
 // or if using index.ts
-const { pluralit } = requre("@samuraijane/pluralit");
+const { pluralit } = require("@samuraijane/pluralit");
 
 console.log(pluralit("book"));
 ```
