@@ -28,9 +28,9 @@ npm link @samuraijane/pluralit
 ```javascript
 // index.mjs
 import { pluralit } from "@samuraijane/pluralit";
-
 // or if using index.ts
 const { pluralit } = requre("@samuraijane/pluralit");
+
 console.log(pluralit("book"));
 ```
 
@@ -40,7 +40,7 @@ node index.ts
 
 # or
 
-node index.mjs`
+node index.mjs
 ```
 
 5. To unlink, follow the steps below
