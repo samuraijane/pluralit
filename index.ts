@@ -1,8 +1,11 @@
 function pluralit(string: string, matchCase = true) {
+  if (!string) {
+    return "ERROR: It looks like you have not entered any words.";
+  }
   const words = string.split(' ');
-  const lastWord = words[words.length - 1] || 'a';  // TODO this is here only to keep TS happy
+  const lastWord = words[words.length - 1];
   words.pop();
-  const isLowerCase = lastWord[0] === lastWord[0]?.toLowerCase();
+  const isLowerCase = lastWord![0] === lastWord![0]?.toLowerCase();
   let pluralChar = 's';
   if (!matchCase && isLowerCase) {
     pluralChar = 'S';
@@ -10,7 +13,10 @@ function pluralit(string: string, matchCase = true) {
   if (matchCase && !isLowerCase) {
     pluralChar = 'S';
   }
-  return `${words.join(' ')} ${lastWord}${pluralChar}`;
+  if (words.length > 1) {
+    return `${words.join(' ')} ${lastWord}${pluralChar}`;
+  }
+  return `${lastWord}${pluralChar}`;
 }
 
 export { pluralit };
