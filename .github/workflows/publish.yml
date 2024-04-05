@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4  # checks out the repository
       - uses: pnpm/action-setup@v3  # sets up pnpm
