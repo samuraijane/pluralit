@@ -10,7 +10,7 @@ cd pluralit
 npm link
 ```
 
-2. Sibling #2 – **consuming**
+2. Sibling #2 – **consuming/**
 ```bash
 mkdir consuming
 cd !$
