@@ -18,7 +18,7 @@ jobs:
           version: 7
       - uses: actions/setup-node@v4  # sets up node
         with:
-          node-version: '16.x'
+          node-version: '20.x'
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile  # install with a frozen lockfile
       - name: Create Release Pull Request or Publish  # this is our last step
@@ -27,5 +27,5 @@ jobs:
         with:
           publish: pnpm run release  # then runs the build
         env:
-          GITHUB_TOKEN: ${{ secrets.CARLOS }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.CARLOS }}
