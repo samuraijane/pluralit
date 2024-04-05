@@ -49,5 +49,7 @@ cd pluralit
 npm unlink
 cd ../consuming
 npm unlink --no-save @samuraijane/pluralit
-
 ```
+
+## Built with the help of Matt Pocock
+**pluralit** is not intended to be used in production. It was built while following an excellent [tutorial](https://youtu.be/eh89VE3Mk5g?si=LTaLOVKoF1wbaJfZ) pulished by Matt Pocock. You can also see the [notes](https://gist.github.com/samuraijane/94debb1a7271390b28e606a6549df4d6) I made while following his video.
