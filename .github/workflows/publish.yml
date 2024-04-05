@@ -27,5 +27,5 @@ jobs:
         with:
           publish: pnpm run release  # then runs the build
         env:
-          GITHUB_TOKEN: ${{ secrets.CARLOS }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{secrets.CARLOS}}
