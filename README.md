@@ -30,7 +30,7 @@ npm link @samuraijane/pluralit
 import { pluralit } from "@samuraijane/pluralit";
 
 // or if using index.ts
-const { pluralit } from "@samuraijane/pluralit";
+const { pluralit } = requre("@samuraijane/pluralit");
 console.log(pluralit("book"));
 ```
 
